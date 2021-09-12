@@ -18,6 +18,10 @@ class APIHandler {
     return this.api.delete(`/todos/${id}`);
   }
 
+  async updateATask(id,task) {
+    return this.api.put(`/todos/${id}`,task);
+  }
+
 }
 
 export default APIHandler 
