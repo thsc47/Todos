@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import APIHandler from "../../APIHandler";
 const API = new APIHandler("http://localhost:5000");
 
-function Home() {
+const Home = () => {
   const [tasks, setTasks] = useState([]);
 
   const fetchDb = async () => {
