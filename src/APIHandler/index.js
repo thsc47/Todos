@@ -10,6 +10,14 @@ class APIHandler {
     return this.api.get(`/todos`);
   }
 
+  async postATask(task) {
+    return this.api.post(`/todos`, task);
+  }
+
+  async deleteATask(id) {
+    return this.api.delete(`/todos`, id);
+  }
+
 }
 
 export default APIHandler 
