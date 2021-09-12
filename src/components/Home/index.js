@@ -25,8 +25,10 @@ const Home = () => {
   };
 
   const deleteATask = async (id) => {
-    const post = await API.deleteATask({ _id: `${id}` });
+    console.log(id)
+    const post = await API.deleteATask(id);
     console.log(post);
+    //console.log('post');
     fetchDb();
   };
 

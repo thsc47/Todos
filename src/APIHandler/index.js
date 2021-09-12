@@ -15,7 +15,7 @@ class APIHandler {
   }
 
   async deleteATask(id) {
-    return this.api.delete(`/todos`, id);
+    return this.api.delete(`/todos/${id}`);
   }
 
 }
