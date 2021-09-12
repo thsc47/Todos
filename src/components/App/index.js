@@ -1,28 +1,15 @@
-import { useEffect, useState } from "react";
-import APIHandler from "../../APIHandler";
-const API = new APIHandler("http://localhost:5000");
+import GlobalStyle from "../../GlobalStyle";
+import Home from "../Home";
+import Navbar from "../Navbar";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-
-  const fetchDb = async () => {
-    const { data } = await API.getAllTasks();
-    setTasks(data);
-  };
-
-  useEffect(() => {
-    fetchDb();
-  }, []);
-
   return (
-    <div className="App">
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={task._id}>{task.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+    <>
+    <GlobalStyle />
+    <Navbar />
+    <Home />
+    </>
+  ) 
 }
 
 export default App;
